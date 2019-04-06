@@ -53,8 +53,7 @@ FileInstall, Lib\CleanDC_Searcher.Alert.wav, %A_Temp%\CleanDC_Searcher.Alert.wav
 FileInstall, Lib\USkin.dll, %A_Temp%\USkin.dll, 1
 FileInstall, Lib\Milikymac.msstyles, %A_Temp%\Milikymac.msstyles, 1
 
-;SkinForm(Apply, A_Temp . "\USkin.dll", A_Temp . "\Milikymac.msstyles")
-SkinForm(Apply, A_Temp . "\USkin.dll", A_Temp . "\Sierra.msstyles")
+SkinForm(Apply, A_Temp . "\USkin.dll", A_Temp . "\Milikymac.msstyles")
 
 gosub, var_init
 gosub, gui_init
