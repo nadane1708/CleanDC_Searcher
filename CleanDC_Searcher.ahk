@@ -1,10 +1,10 @@
-﻿/*
+/*
 -----------------------Script Info-----------------------
-Tested Windows Version: 10.0.17763.379 Enterprise LTSC (x64) (a.k.a Windows 10 Enterprise LTSC (x64))
+Tested Windows Version: 10.0.17763.557 Enterprise LTSC (x64) (a.k.a Windows 10 Enterprise LTSC (x64))
 Tested Autohotkey Version: 1.1.30.03 Unicode 32-bit
 First Release Date : 2018/04/29
-Last Modified : 2019/04/06
-Version: v0.79 Beta
+Last Modified : 2019/07/09
+Version: v0.80 Beta
 Author: Nayeon♥ (TWICE Gallery)
 ---------------------------------------------------------
 */
@@ -39,8 +39,8 @@ DetectHiddenWindows, On
 #Include Lib\DownloadFile().ahk
 #Include Lib\Unzip().ahk
 
-global __scriptVer := "20190406_a"
-global _ver := "v0.79 Beta"
+global __scriptVer := "20190709_a"
+global _ver := "v0.80 Beta"
 req := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 global req
 
@@ -53,7 +53,8 @@ FileInstall, Lib\CleanDC_Searcher.Alert.wav, %A_Temp%\CleanDC_Searcher.Alert.wav
 FileInstall, Lib\USkin.dll, %A_Temp%\USkin.dll, 1
 FileInstall, Lib\Milikymac.msstyles, %A_Temp%\Milikymac.msstyles, 1
 
-SkinForm(Apply, A_Temp . "\USkin.dll", A_Temp . "\Milikymac.msstyles")
+;SkinForm(Apply, A_Temp . "\USkin.dll", A_Temp . "\Milikymac.msstyles")
+SkinForm(Apply, A_Temp . "\USkin.dll", A_Temp . "\Sierra.msstyles")
 
 gosub, var_init
 gosub, gui_init
@@ -61,7 +62,7 @@ gosub, init_load
 
 ;SetTimer, WatchMouse, 50
 
-SetTimer, w_log, 1800000
+;SetTimer, w_log, 1800000
 return
 
 /*
@@ -81,6 +82,7 @@ ttext:= ""
 return
 */
 
+/*
 w_log:
 Gui, 1:Submit, Nohide
 
@@ -111,7 +113,7 @@ FormatTime, t_now, , yyyy-MM-dd_HH-mm-ss
 file_name := "log_" t_now ".txt"
 FileAppend, %txt_out%, %file_name%
 return
-
+*/
 /*
 WatchMouse:
 MouseGetPos,,, ID,,2
@@ -262,7 +264,7 @@ return
 gui_init:
 OnMessage(0x112, "WM_SYSCOMMAND")
 Gui, Add, Text, x26 y27 w120 h20 , 갤러리 id
-Gui, Add, Edit, x26 y47 w180 h20 vgall_ID , twice
+Gui, Add, Edit, x26 y47 w180 h20 vgall_ID , twice_new
 Gui, Add, Text, x26 y87 w200 h20 vtext_kw , 검색 키워드 (쉼표로 구분)
 Gui, Add, Edit, x26 y107 w180 h20 vkeyword , 
 Gui, Add, Button, x36 y147 w100 h30 gBTN , 검색
@@ -860,7 +862,7 @@ Restore:
 Return
 
 GetOut:
-gosub, w_log
+;gosub, w_log
 GuiClose:
 Gui, 1:Submit, Nohide
 SetTimer, Load, Off
