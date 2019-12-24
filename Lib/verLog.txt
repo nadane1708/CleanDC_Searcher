@@ -1,12 +1,12 @@
-﻿ver_Log =
+ver_Log =
 (
 -----------------------Script Info-----------------------
-Tested Windows Version: 10.0.17763.379 Enterprise LTSC (x64)
+Tested Windows Version: 10.0.17763.557 Enterprise LTSC (x64)
 (a.k.a Windows 10 Enterprise LTSC (x64))
 Tested Autohotkey Version: 1.1.30.03 Unicode 32-bit
 First Release Date : 2018/04/29
-Last Modified : 2019/04/06
-Version: v0.79 Beta
+Last Modified : 2019/07/09
+Version: v0.80 Beta
 Author: Nayeon♥ (TWICE Gallery)
 --------------------------------------------------------
 
@@ -77,6 +77,10 @@ AHK_L 업데이트 핫픽스 (v1.1.29.01)
 - v0.79 Beta - April 6, 2019
 AHK_L 업데이트 핫픽스 (v1.1.30.03)
 라이선스 버전 업데이트 (GPL v2.0 -> GPL v3.0)
+
+- v0.80 Beta - July 9, 2019
+검색 목록 로그 생성 기능 제거
+트갤 서버 이전으로 인한 기본 검색 갤러리명 수정(twice -> twice_new)
 
 ---------------------Thanks to-----------------------
 Zard (TWICE Gallery) - Beta Tester & Feedback
